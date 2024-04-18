@@ -1,0 +1,30 @@
+
+	/* -  MAP  - */
+	
+	.rooms {
+		fill: wheat;
+		stroke: dimgray;
+		stroke-width: 0.5;
+	}
+
+	.external_walls {
+		fill: none;
+		stroke: black;
+		stroke-width: 1.0;
+	}
+
+	.interior_walls {
+		fill: none;
+		stroke: black;
+		stroke-width: 0.5;
+	}
+		
+	a .caption {
+        fill: royalblue;
+		font: bold 4px sans-serif;
+    }
+		
+	.caption {
+        fill: black;
+		font: bold 4px sans-serif;
+    }
