@@ -28,3 +28,15 @@
         fill: black;
 		font: bold 4px sans-serif;
     }
+	
+	/* -  COMMON  - */
+	
+	.list_it {
+		padding: 5px;
+		font: bold 12px sans-serif;
+	}
+	
+	.list_it a {
+		text-decoration: none;
+	}
+	
