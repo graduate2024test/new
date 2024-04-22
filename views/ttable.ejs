@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<head>
+	
+	<meta charset="UTF-8">
+	<title>TIMETABLE</title>
+	<style>
+	div {
+		color: black;
+		font-size: 80%;
+		font-family: sans-serif;
+	}
+	
+	.grid_container {
+        display: grid;
+        grid-gap: 1px;
+		width: 70%;
+		margin: auto;
+		grid-template-columns: repeat(49, 1fr);
+        grid-template-rows: repeat(18, 0.5fr);
+	}
+	
+	.item {
+        background-color: white;
+		border-style: solid;
+		border-width: 1px;
+		border-color: darkgrey;
+		text-align: center;
+    }
+	
+	.sidebarRoom {
+        background-color: lavender;
+    }
+	
+	.borderLeft {
+		border-left: 2px solid black;
+	}
+		
+	.nav_bar {
+    }
+	
+	.list_it {
+		padding: 5px;
+		font: bold 12px sans-serif;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	</style>
+
+</head>
+<body>
+		
+	<div class="nav_bar">
+		<div class="list_it">ЗАГРУЗКА АУДИТОРИЙ</div>
+		<div class="list_it"><a href="map">КАРТА ЭТАЖА</a></div>
+	</div>
+		
+<div class="grid_container">
+	
+	<div class="sidebarRoom"></div>
+	
+	  <div class="borderLeft"></div>
+	  <div>ПН</div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+
+	  <div class="borderLeft"></div>
+	  <div>ВТ</div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	
+	  <div class="borderLeft"></div>
+	  <div>СР</div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	
+	  <div class="borderLeft"></div>
+	  <div>ЧТ</div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	
+	  <div class="borderLeft"></div>
+	  <div>ПТ</div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+
+	  <div class="borderLeft"></div>
+	  <div>СБ</div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	
+	<div class="sidebarRoom">Аудитория</div>
+
+	<div class="item borderLeft">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+	<div class="item">5</div>
+	<div class="item">6</div>
+	<div class="item">7</div>
+	<div class="item">8</div>
+
+	<div class="item borderLeft">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+	<div class="item">5</div>
+	<div class="item">6</div>
+	<div class="item">7</div>
+	<div class="item">8</div>
+
+	<div class="item borderLeft">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+	<div class="item">5</div>
+	<div class="item">6</div>
+	<div class="item">7</div>
+	<div class="item">8</div>
+
+	<div class="item borderLeft">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+	<div class="item">5</div>
+	<div class="item">6</div>
+	<div class="item">7</div>
+	<div class="item">8</div>
+
+	<div class="item borderLeft">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+	<div class="item">5</div>
+	<div class="item">6</div>
+	<div class="item">7</div>
+	<div class="item">8</div>
+	
+	<div class="item borderLeft">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+	<div class="item">5</div>
+	<div class="item">6</div>
+	<div class="item">7</div>
+	<div class="item">8</div>
+		
+	<% for (var i = 0; i < ttable.length; i++) { %>	
+		
+		<div class="sidebarRoom"><%= ttable[i].room %></div>
+				
+		<div class="item borderLeft"><%= ttable[i].MON0820 %></div>
+		<div class="item"><%= ttable[i].MON1000 %></div>
+		<div class="item"><%= ttable[i].MON1205 %></div>
+		<div class="item"><%= ttable[i].MON1350 %></div>
+		<div class="item"><%= ttable[i].MON1535 %></div>
+		<div class="item"><%= ttable[i].MON1720 %></div>
+		<div class="item"><%= ttable[i].MON1845 %></div>
+		<div class="item"><%= ttable[i].MON2010 %></div>
+		
+		<div class="item borderLeft"><%= ttable[i].TUE0820 %></div>
+		<div class="item"><%= ttable[i].TUE1000 %></div>
+		<div class="item"><%= ttable[i].TUE1205 %></div>
+		<div class="item"><%= ttable[i].TUE1350 %></div>
+		<div class="item"><%= ttable[i].TUE1535 %></div>
+		<div class="item"><%= ttable[i].TUE1720 %></div>
+		<div class="item"><%= ttable[i].TUE1845 %></div>
+		<div class="item"><%= ttable[i].TUE2010 %></div>
+		
+		<div class="item borderLeft"><%= ttable[i].WED0820 %></div>
+		<div class="item"><%= ttable[i].WED1000 %></div>
+		<div class="item"><%= ttable[i].WED1205 %></div>
+		<div class="item"><%= ttable[i].WED1350 %></div>
+		<div class="item"><%= ttable[i].WED1535 %></div>
+		<div class="item"><%= ttable[i].WED1720 %></div>
+		<div class="item"><%= ttable[i].WED1845 %></div>
+		<div class="item"><%= ttable[i].WED2010 %></div>
+		
+		<div class="item borderLeft"><%= ttable[i].THU0820 %></div>
+		<div class="item"><%= ttable[i].THU1000 %></div>
+		<div class="item"><%= ttable[i].THU1205 %></div>
+		<div class="item"><%= ttable[i].THU1350 %></div>
+		<div class="item"><%= ttable[i].THU1535 %></div>
+		<div class="item"><%= ttable[i].THU1720 %></div>
+		<div class="item"><%= ttable[i].THU1845 %></div>
+		<div class="item"><%= ttable[i].THU2010 %></div>
+		
+		<div class="item borderLeft"><%= ttable[i].FRI0820 %></div>
+		<div class="item"><%= ttable[i].FRI1000 %></div>
+		<div class="item"><%= ttable[i].FRI1205 %></div>
+		<div class="item"><%= ttable[i].FRI1350 %></div>
+		<div class="item"><%= ttable[i].FRI1535 %></div>
+		<div class="item"><%= ttable[i].FRI1720 %></div>
+		<div class="item"><%= ttable[i].FRI1845 %></div>
+		<div class="item"><%= ttable[i].FRI2010 %></div>
+		
+		<div class="item borderLeft"><%= ttable[i].SAT0820 %></div>
+		<div class="item"><%= ttable[i].SAT1000 %></div>
+		<div class="item"><%= ttable[i].SAT1205 %></div>
+		<div class="item"><%= ttable[i].SAT1350 %></div>
+		<div class="item"><%= ttable[i].SAT1535 %></div>
+		<div class="item"><%= ttable[i].SAT1720 %></div>
+		<div class="item"><%= ttable[i].SAT1845 %></div>
+		<div class="item"><%= ttable[i].SAT2010 %></div>
+	
+	<% } %>
+		
+</div>	
+
+</body>

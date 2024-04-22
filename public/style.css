@@ -40,3 +40,49 @@
 		text-decoration: none;
 	}
 	
+	/* - ROOMS - */
+	
+	.grid_container {
+        display: grid;
+        grid-gap: 10px;
+		width: 70%;
+		margin: auto;
+		grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(22, 0.5fr);
+	}
+	
+	div {
+		color: black;
+		font-size: 80%;
+		font-family: sans-serif;
+	}
+	
+	.item {
+        background-color: lavender;
+		border-style: solid;
+		border-width: 1px;
+		border-color: darkgrey;
+    }
+	
+	.itemWeek {
+        background-color: white;
+		text-align: center;
+    }
+	
+	.sidebarTime {
+        background-color: white;
+		text-align: center;
+    }
+	
+	.sidebarSession {
+        background-color: white;
+    }
+	
+	.empty {
+        background-color: white;
+    }
+	
+	/* - TIMETABLE - */
+
+
+

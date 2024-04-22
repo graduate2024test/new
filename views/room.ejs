@@ -10,15 +10,61 @@
 <body>
 		
   <div class="nav_bar">
-    <div class="list_it">АУДИТОРИЯ № ___</div>
+    <div class="list_it">АУДИТОРИЯ № <%= room_list[0].room %></div>
     <div class="list_it"><a href="../map">КАРТА ЭТАЖА</a></div>
   </div>
-						
-  <script>
-    let div = document.createElement('div');
-    div.innerHTML = "<strong>Вы прочитали важное сообщение.</strong>";
-    document.body.append(div);
-  </script>
+
+
+			
+<div class="grid_container">
 	
+	<div class="item empty"></div>
+		<div class="item itemWeek"><p>ПН</p></div>
+		<div class="item itemWeek"><p>ВТ</p></div>
+		<div class="item itemWeek"><p>СР</p></div>
+		<div class="item itemWeek"><p>ЧТ</p></div>
+		<div class="item itemWeek"><p>ПТ</p></div>
+		<div class="item itemWeek"><p>СБ</p></div>
+    <div class="item empty"></div>
+		
+	<% for (var room_item of room_list) { %>
+		<div class="item sidebarSession"></div>
+		<% if (room_item.week == "ПН") { %>
+			<div class="item"><%= room_item.students %>, </br><%= room_item.teacher %>, </br><%= room_item.lesson %></div>
+		<% } else { %>
+			<div class="item"></div>
+		<% } %>
+		<% if (room_item.week == "ВТ") { %>
+			<div class="item"><%= room_item.students %>, </br><%= room_item.teacher %>, </br><%= room_item.lesson %></div>
+		<% } else { %>
+			<div class="item"></div>
+		<% } %>
+		<% if (room_item.week == "СР") { %>
+			<div class="item"><%= room_item.students %>, </br><%= room_item.teacher %>, </br><%= room_item.lesson %></div>
+		<% } else { %>
+			<div class="item"></div>
+		<% } %>
+		<% if (room_item.week == "ЧТ") { %>
+			<div class="item"><%= room_item.students %>, </br><%= room_item.teacher %>, </br><%= room_item.lesson %></div>
+		<% } else { %>
+			<div class="item"></div>
+		<% } %>
+		<% if (room_item.week == "ПТ") { %>
+			<div class="item"><%= room_item.students %>, </br><%= room_item.teacher %>, </br><%= room_item.lesson %></div>
+		<% } else { %>
+			<div class="item"></div>
+		<% } %>
+		<% if (room_item.week == "СБ") { %>
+			<div class="item"><%= room_item.students %>, </br><%= room_item.teacher %>, </br><%= room_item.lesson %></div>
+		<% } else { %>
+			<div class="item"></div>
+		<% } %>
+		<div class="item sidebarTime"><p><%= room_item.time %></p></div>	
+	<% } %>
+						
+</div>
+
+
+
 </body>
 </html>
