@@ -63,8 +63,7 @@ const get_room_ejs = function(req, res, next) {
   
   const get_ttable_ejs = function(req, res, next) {
 	  
-	const jsonPath = path.join(process.cwd(), 'public', 'r310.json')   /* + */
-	
+	const jsonPath = path.join(process.cwd(), 'public', 'ttable.json')   /* + */
 	
     const ttableList = JSON.parse(
     
