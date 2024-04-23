@@ -8,9 +8,9 @@ const PORT = 3000
 
 /* ********************************************* */
 /* *********************************** CONSTANTS */
-const dirname_views = path.join(process.cwd(), `views`)
+const dirname_views = path.join(__dirname, `views`)
 
-const dirname_public = path.join(process.cwd(), `public`)
+const dirname_public = path.join(__dirname, `public`)
 
 const static_dir_public = express.static(dirname_public)
 
@@ -35,19 +35,15 @@ const get_room_ejs = function(req, res, next) {
   var room_id_param = req.params['room_id']
   console.log(`room id: ${room_id_param}`)
   
-  const jsonPath = path.join(process.cwd(), 'public', 'r310.json') /*---------------*/
-  
   const scheduleList = JSON.parse(
     
-	fs.readFileSync(jsonPath, 'utf8') /*---------------*/
-	
-	/* fs.readFileSync(
+	fs.readFileSync(
       dirname_public +
       '\\' +
       room_id_param +
       '.json',
       'utf-8'
-      ) */
+      )
 	)
   scheduleList.sort(
     (a, b) => {
