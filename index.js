@@ -8,9 +8,9 @@ const PORT = 3000
 
 /* ********************************************* */
 /* *********************************** CONSTANTS */
-const dirname_views = path.join(__dirname, `views`)
+const dirname_views = path.join(process.cwd(), `views`)
 
-const dirname_public = path.join(__dirname, `public`)
+const dirname_public = path.join(process.cwd(), `public`)
 
 const static_dir_public = express.static(dirname_public)
 
