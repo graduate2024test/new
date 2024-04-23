@@ -62,12 +62,19 @@ const get_room_ejs = function(req, res, next) {
   }
   
   const get_ttable_ejs = function(req, res, next) {
+	  
+	const jsonPath = path.join(process.cwd(), 'public', 'r310.json')   /* + */
+	
+	
     const ttableList = JSON.parse(
-      fs.readFileSync(
+    
+      fs.readFileSync(jsonPath, 'utf8')                                    /* + */
+	  
+      /* fs.readFileSync(
         dirname_public +
         '\\ttable.json',
         'utf-8'
-      )
+      ) */
 	)
   
     res.render(`ttable.ejs`,{ttable:ttableList})  
