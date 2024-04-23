@@ -37,7 +37,7 @@ const get_room_ejs = function(req, res, next) {
   
   const id_room_str = concat(room_id_param, '.json')
   
-  const jsonPath = path.join(process.cwd(), 'public', id_room_str)   /* + */
+  const jsonPath = path.join(process.cwd(), 'public', id_room_str)       /* + */
   
   const scheduleList = JSON.parse(
   
